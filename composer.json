@@ -56,6 +56,7 @@
   },
   "scripts": {
     "fix": [
+      "./tools/vendor/bin/php-cs-fixer fix -v --diff",
       "./tools/vendor/bin/phpcbf",
       "@composer normalize --diff",
       "@fix:tools"
@@ -84,6 +85,7 @@
     ],
     "test:lint": [
       "./tools/vendor/bin/phplint",
+      "./tools/vendor/bin/php-cs-fixer check -v --diff",
       "./tools/vendor/bin/phpcs"
     ]
   }

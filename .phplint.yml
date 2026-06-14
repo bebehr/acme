@@ -1,3 +1,6 @@
+path:
+  - .
+  - .php-cs-fixer.php
 jobs: 2
 exclude:
   - .vscode
