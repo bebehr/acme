@@ -56,6 +56,7 @@
   },
   "scripts": {
     "fix": [
+      "./tools/vendor/bin/phpcbf",
       "@composer normalize --diff",
       "@fix:tools"
     ],
@@ -63,7 +64,7 @@
       "@composer normalize --diff tools/composer.json"
     ],
     "test": [
-      "@test:syntax",
+      "@test:lint",
       "@test:composer"
     ],
     "test:composer": [
@@ -81,8 +82,9 @@
       "@composer audit --abandoned=report --working-dir=tools",
       "@composer outdated --direct --working-dir=tools"
     ],
-    "test:syntax": [
-      "./tools/vendor/bin/phplint"
+    "test:lint": [
+      "./tools/vendor/bin/phplint",
+      "./tools/vendor/bin/phpcs"
     ]
   }
 }
