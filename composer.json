@@ -66,7 +66,11 @@
     ],
     "test": [
       "@test:lint",
+      "@test:analyse",
       "@test:composer"
+    ],
+    "test:analyse": [
+      "./tools/vendor/bin/phpcpd --exclude .vscode --exclude tools --exclude var --exclude vendor --fuzzy ."
     ],
     "test:composer": [
       "@composer validate --strict",
