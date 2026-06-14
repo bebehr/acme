@@ -1,0 +1,88 @@
+{
+  "name": "bebehr/acme",
+  "description": "A Company that Manufactures Everything",
+  "license": "MIT",
+  "type": "project",
+  "authors": [
+    {
+      "name": "bebehr",
+      "homepage": "https://github.com/bebehr"
+    }
+  ],
+  "homepage": "https://github.com/bebehr/acme",
+  "support": {
+    "issues": "https://github.com/bebehr/acme/issues"
+  },
+  "require": {
+    "php": "^8.2"
+  },
+  "require-dev": {
+    "bamarni/composer-bin-plugin": "^1.8",
+    "ergebnis/composer-normalize": "^2.52"
+  },
+  "minimum-stability": "stable",
+  "prefer-stable": true,
+  "autoload": {
+    "psr-4": {
+      "App\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Tests\\": "tests/"
+    }
+  },
+  "config": {
+    "allow-plugins": {
+      "bamarni/composer-bin-plugin": true,
+      "ergebnis/composer-normalize": true
+    },
+    "optimize-autoloader": true,
+    "platform": {
+      "php": "8.2.0"
+    },
+    "sort-packages": true
+  },
+  "extra": {
+    "bamarni-bin": {
+      "bin-links": false,
+      "forward-command": true,
+      "target-directory": "tools"
+    },
+    "composer-normalize": {
+      "indent-size": 2,
+      "indent-style": "space"
+    }
+  },
+  "scripts": {
+    "fix": [
+      "@composer normalize --diff",
+      "@fix:tools"
+    ],
+    "fix:tools": [
+      "@composer normalize --diff tools/composer.json"
+    ],
+    "test": [
+      "@test:syntax",
+      "@test:composer"
+    ],
+    "test:composer": [
+      "@composer validate --strict",
+      "@composer check-platform-reqs",
+      "@composer normalize --dry-run",
+      "@composer audit",
+      "@composer outdated --direct",
+      "@test:composer:tools"
+    ],
+    "test:composer:tools": [
+      "@composer validate --no-check-publish --working-dir=tools",
+      "@composer check-platform-reqs --working-dir=tools",
+      "@composer normalize --dry-run tools/composer.json",
+      "@composer audit --abandoned=report --working-dir=tools",
+      "@composer outdated --direct --working-dir=tools"
+    ],
+    "test:syntax": [
+      "./tools/vendor/bin/phplint"
+    ]
+  }
+}

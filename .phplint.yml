@@ -1,0 +1,8 @@
+jobs: 2
+exclude:
+  - .vscode
+  - tools
+  - var
+  - vendor
+warning: true
+cache-dir: ./var/cache/.phplint.cache
