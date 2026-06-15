@@ -18,7 +18,9 @@
   },
   "require-dev": {
     "bamarni/composer-bin-plugin": "^1.8",
-    "ergebnis/composer-normalize": "^2.52"
+    "ergebnis/composer-normalize": "^2.52",
+    "fakerphp/faker": "^1.24",
+    "phpunit/phpunit": "^11.5"
   },
   "minimum-stability": "stable",
   "prefer-stable": true,
@@ -67,6 +69,7 @@
     "test": [
       "@test:lint",
       "@test:analyse",
+      "@test:unit",
       "@test:composer"
     ],
     "test:analyse": [
@@ -93,6 +96,9 @@
       "./tools/vendor/bin/phplint",
       "./tools/vendor/bin/php-cs-fixer check -v --diff",
       "./tools/vendor/bin/phpcs"
+    ],
+    "test:unit": [
+      "php -d xdebug.mode=coverage vendor/bin/phpunit --testsuite=Unit"
     ]
   }
 }

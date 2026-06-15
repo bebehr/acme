@@ -2,6 +2,10 @@
 
 declare(strict_types=1);
 
+use App\Greeter;
+
 require __DIR__ . '/../vendor/autoload.php';
 
-echo 'Hello, World!';
+$greeting = (new Greeter())->greet('World');
+
+echo $greeting;

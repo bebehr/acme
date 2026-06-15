@@ -5,6 +5,7 @@
 *.php  diff=php
 
 /.vscode/**         export-ignore
+/tests/**           export-ignore
 /tools/**           export-ignore
 /var/**             export-ignore
 /.editorconfig      export-ignore
@@ -14,4 +15,5 @@
 /.phpcs.xml         export-ignore
 /.phplint.yml       export-ignore
 /.phpmd.xml         export-ignore
+/phpunit.xml        export-ignore
 /README.md          export-ignore
