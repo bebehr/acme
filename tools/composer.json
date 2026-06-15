@@ -9,6 +9,11 @@
     "overtrue/phplint": "^9.7",
     "phpcompatibility/php-compatibility": "^10.0.0@dev",
     "phpmd/phpmd": "^2.15",
+    "phpstan/extension-installer": "^1.4",
+    "phpstan/phpstan": "^2.2",
+    "phpstan/phpstan-deprecation-rules": "^2.0",
+    "phpstan/phpstan-phpunit": "^2.0",
+    "phpstan/phpstan-strict-rules": "^2.0",
     "sebastian/phpcpd": "^6.0",
     "slevomat/coding-standard": "^8.29",
     "squizlabs/php_codesniffer": "^4.0"
@@ -17,7 +22,8 @@
   "prefer-stable": true,
   "config": {
     "allow-plugins": {
-      "dealerdirect/phpcodesniffer-composer-installer": true
+      "dealerdirect/phpcodesniffer-composer-installer": true,
+      "phpstan/extension-installer": true
     },
     "optimize-autoloader": true,
     "platform": {

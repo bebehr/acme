@@ -1,0 +1,12 @@
+parameters:
+  level: max
+  paths:
+    - .
+  excludePaths:
+    - .vscode/*
+    - tools/*
+    - var/*
+    - vendor/*
+  parallel:
+    maximumNumberOfProcesses: 2
+  tmpDir: var/cache/phpstan

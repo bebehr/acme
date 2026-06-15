@@ -17,10 +17,9 @@ final class GreeterTest extends TestCase
         $faker = Factory::create();
         $name = $faker->name();
         $expectedGreeting = sprintf('Hello, %s!', $name);
-        $greeter = new Greeter();
 
-        $greeting = $greeter->greet($name);
+        $greeting = (new Greeter())->greet($name);
 
-        $this->assertSame($expectedGreeting, $greeting);
+        self::assertSame($expectedGreeting, $greeting);
     }
 }
