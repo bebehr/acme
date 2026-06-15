@@ -5,9 +5,11 @@
 !/.vscode/extensions.json
 !/.vscode/settings.json
 
-/tools/**
+/tools/*
 !/tools/composer.json
 !/tools/composer.lock
+!/tools/*/
+/tools/*/*
 !/tools/*/composer.json
 !/tools/*/composer.lock
 

@@ -1,4 +1,5 @@
 {
+  "intelephense.environment.phpVersion": "8.2",
   "php.format.enable": false,
   "php.suggest.basic": false,
   "php.validate.enable": false

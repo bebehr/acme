@@ -1,0 +1,22 @@
+{
+  "license": "MIT",
+  "type": "project",
+  "require": {
+    "php": "^8.2"
+  },
+  "require-dev": {
+    "nunomaduro/phpinsights": "^2.13"
+  },
+  "minimum-stability": "alpha",
+  "prefer-stable": true,
+  "config": {
+    "allow-plugins": {
+      "dealerdirect/phpcodesniffer-composer-installer": true
+    },
+    "optimize-autoloader": true,
+    "platform": {
+      "php": "8.2.27"
+    },
+    "sort-packages": true
+  }
+}

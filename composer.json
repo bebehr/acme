@@ -78,7 +78,8 @@
       "./tools/vendor/bin/phpmd . ansi .phpmd.xml --exclude '*.ddev/*,*.vscode/*,*tools/*,*var/cache/*,*var/log/*,*var/report/*,*vendor/*' --cache --cache-file var/cache/.phpmd.result-cache.php --cache-strategy content",
       "./tools/vendor/bin/phpstan analyse",
       "./tools/vendor/bin/psalm --no-cache",
-      "./tools/vendor/bin/psalm --no-cache --taint-analysis"
+      "./tools/vendor/bin/psalm --no-cache --taint-analysis",
+      "./tools/phpinsights/vendor/bin/phpinsights analyse -c phpinsights.php -n -v ."
     ],
     "test:composer": [
       "@composer validate --strict",
