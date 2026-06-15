@@ -8,7 +8,12 @@ use PhpCsFixer\Finder;
 $finder = (new Finder())
     ->in(__DIR__)
     ->ignoreDotFiles(false)
-    ->exclude(['dev-tools/phpstan', 'tests/Fixtures']);
+    ->exclude([
+        '.vscode',
+        'tools',
+        'var',
+        'vendor',
+    ]);
 
 $rules = [
     '@auto' => true,

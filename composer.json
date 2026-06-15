@@ -70,7 +70,9 @@
       "@test:composer"
     ],
     "test:analyse": [
-      "./tools/vendor/bin/phpcpd --exclude .vscode --exclude tools --exclude var --exclude vendor --fuzzy ."
+      "./tools/vendor/bin/phpcpd --exclude .vscode --exclude tools --exclude var --exclude vendor --fuzzy .",
+      "./tools/vendor/bin/phpmd . html .phpmd.xml --report-file var/report/phpmd.html --exclude '*.vscode/*,*tools/*,*var/cache/*,*var/log/*,*var/report/*,*vendor/*' --cache --cache-file var/cache/.phpmd.result-cache.php --cache-strategy content --ignore-errors-on-exit --ignore-violations-on-exit",
+      "./tools/vendor/bin/phpmd . ansi .phpmd.xml --exclude '*.vscode/*,*tools/*,*var/cache/*,*var/log/*,*var/report/*,*vendor/*' --cache --cache-file var/cache/.phpmd.result-cache.php --cache-strategy content"
     ],
     "test:composer": [
       "@composer validate --strict",

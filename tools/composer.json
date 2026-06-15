@@ -8,6 +8,7 @@
     "friendsofphp/php-cs-fixer": "^3.95",
     "overtrue/phplint": "^9.7",
     "phpcompatibility/php-compatibility": "^10.0.0@dev",
+    "phpmd/phpmd": "^2.15",
     "sebastian/phpcpd": "^6.0",
     "slevomat/coding-standard": "^8.29",
     "squizlabs/php_codesniffer": "^4.0"
