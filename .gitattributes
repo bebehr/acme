@@ -17,4 +17,5 @@
 /.phpmd.xml         export-ignore
 /phpstan.neon       export-ignore
 /phpunit.xml        export-ignore
+/psalm.xml          export-ignore
 /README.md          export-ignore

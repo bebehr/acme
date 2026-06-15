@@ -9,6 +9,7 @@ $finder = (new Finder())
     ->in(__DIR__)
     ->ignoreDotFiles(false)
     ->exclude([
+        '.ddev',
         '.vscode',
         'tools',
         'var',

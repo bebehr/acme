@@ -1,3 +1,6 @@
+/.ddev/**
+!/.ddev/config.yaml
+
 /.vscode/**
 !/.vscode/extensions.json
 !/.vscode/settings.json

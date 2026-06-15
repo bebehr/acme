@@ -9,6 +9,7 @@
   <file>.</file>
   <file>.php-cs-fixer.php</file>
 
+  <exclude-pattern>*/.ddev/*</exclude-pattern>
   <exclude-pattern>*/.vscode/*</exclude-pattern>
   <exclude-pattern>*/tools/*</exclude-pattern>
   <exclude-pattern>*/var/cache/*</exclude-pattern>
